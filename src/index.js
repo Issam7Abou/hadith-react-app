@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 
 import App from './App';
-import { ButtonRandomProvider } from './context/button-random.context';
+import { RandomHadithProvider } from './context/random-hadith.context';
 
 import './index.css';
 
@@ -11,9 +11,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <ButtonRandomProvider>
+      <RandomHadithProvider>
         <App />
-      </ButtonRandomProvider>
+      </RandomHadithProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
