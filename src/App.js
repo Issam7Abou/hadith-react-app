@@ -1,19 +1,21 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 
+import NavBar from './components/NavBar/nav-bar.component';
 import HomePage from './components/HomePage/home-page.component';
 import RandomHadith from './components/RandomHadith/random-hadith.component';
 import AllBooks from './components/AllBooks/all-books.components';
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route></Route>
-        <Route></Route>
-        <Route></Route>
-      </Switch>
-    </Router>
+    <>
+      <NavBar />
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/random-hadith' element={<RandomHadith />} />
+        <Route path='/all-books' element={<AllBooks />} />
+      </Routes>
+    </>
   )
 }
 
