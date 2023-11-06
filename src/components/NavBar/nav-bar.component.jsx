@@ -8,13 +8,13 @@ const NavBar = () => {
         <nav>
             <ul>
                 <li>
-                    <Link to='/'>HadithLibrary</Link>
+                    <Link to='/' className="importante">HadithLibrary</Link>
                 </li>
                 <li>
-                    <Link to='/random-hadith'>Random Hadith</Link>
+                    <Link to='/random-hadith' className="importante">Random Hadith</Link>
                 </li>
                 <li>
-                    <Link to='/all-books'>All Books</Link>
+                    <Link to='/all-books' className="importante">All Books</Link>
                 </li>
             </ul>
         </nav>
