@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 import App from './App';
 import { RandomHadithProvider } from './context/random-hadith.context';
+import { BooksProvider } from './context/books.context';
 
 import './index.css';
 
@@ -12,7 +13,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <RandomHadithProvider>
-        <App />
+        <BooksProvider>
+          <App />
+        </BooksProvider>
       </RandomHadithProvider>
     </BrowserRouter>
   </React.StrictMode>
