@@ -1,37 +1,41 @@
 import React, { useEffect, useContext } from "react";
 
 import { RandomHadithContext } from "../../context/random-hadith.context";
+import { fetchRandomHadith } from "../../services/fetch-hadith.component";
+
+import img3 from '..//..//assets/img3.jpg'
+
+import './random-hadith.styles.css'
 
 const RandomHadith = () => {
     const { hadithRandomized, setHadithRandomized } = useContext(RandomHadithContext)
     
-    const fetchHadith = async () => {
-        const apiKey = '$2y$10$BWleXewOsA3SRKdIBKJZbvofXKDjrJhcWfQkCOM0WA7uOtXzquAG'
-        const apiUrl = `/api/hadiths/?apiKey=${apiKey}`
-        const RANDOM_NUMBER = Math.floor(Math.random() * 25)
-        try {
-            const response = await fetch(apiUrl)
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`)
-            }
-            const data = await response.json();
-            setHadithRandomized(data.hadiths.data[RANDOM_NUMBER])
-            console.log(data.hadiths.data[RANDOM_NUMBER])
-        } catch (error) {
-            console.log(error)
-        }
+    const getRandomizedHadith = async () => {
+        const randomHadith = await fetchRandomHadith()
+        if (randomHadith) {
+            setHadithRandomized(randomHadith)
+        } 
     }
+
     // Performs api call onMount
     useEffect(() => {
-        fetchHadith();
+        getRandomizedHadith()
     }, [])
 
     const handleClick = () => {
-        fetchHadith()
+        getRandomizedHadith()
+    }
+
+    const btnStyle = {
+        background: `url(${img3}) no-repeat center center`,
+        backgroundSize: 'cover',
+        border: 'none',
+        padding: '10px 20px',
+        cursor: 'pointer',
     }
 
     return (
-        <div className="random-hadith-container">
+        <div className="random-hadith-container" style={btnStyle}>
             <p>{hadithRandomized.hadithEnglish}</p>
             <h4>Book: {hadithRandomized.book?.bookName}</h4>
             <p>Chapter Name: {hadithRandomized.chapter?.chapterEnglish}</p>

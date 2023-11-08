@@ -27,7 +27,7 @@ const BodyPage = () => {
 
     return (
         <div className="body-container">
-            <div className="random-hadith-container">
+            <div className="body-random-hadith-container">
                 <button onClick={handleClick} className="btn" style={btnStyle1}>Get a Random Hadith</button>
             </div>
             <div className="all-hadith-container">

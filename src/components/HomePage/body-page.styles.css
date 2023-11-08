@@ -11,7 +11,7 @@
     height: 80vh; /* Use full viewport height to center vertically */
 }
 
-.random-hadith-container,
+.body-random-hadith-container,
 .all-hadith-container {
     width: 100%; /* Set the width of the button containers */
     max-width: 500px; /* Maximum width to maintain reasonable size */

@@ -4,7 +4,7 @@ import './App.css';
 import NavBar from './components/NavBar/nav-bar.component';
 import HomePage from './components/HomePage/home-page.component';
 import RandomHadith from './components/RandomHadith/random-hadith.component';
-import AllBooks from './components/AllBooks/all-books.components';
+import AllBooks from './components/AllBooks/BookList/all-books.component';
 
 function App() {
   return (
