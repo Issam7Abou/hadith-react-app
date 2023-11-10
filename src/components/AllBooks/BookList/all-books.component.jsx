@@ -1,38 +1,51 @@
-import React, { useEffect, useContext } from "react";
+import React, { useContext } from "react";
+import { useNavigate } from "react-router";
 
-import { BooksContext } from "../../../context/books.context";
+import { WhichBookContext } from "../../../context/which-book.context";
+
+import './all-books.styles.css'
 
 const AllBooks = () => {
-    const { books, setBooks } = useContext(BooksContext)
+    const { setWhichBook } = useContext(WhichBookContext);
+    const navigate = useNavigate()
 
-    useEffect(() => {
-        const bookFetch = async () => {
-            const apiKey = '$2y$10$BWleXewOsA3SRKdIBKJZbvofXKDjrJhcWfQkCOM0WA7uOtXzquAG'
-            const apiUrl = `/api/books?apiKey=${apiKey}`
-            const response = await fetch(apiUrl)
-            const data = await response.json()
-            setBooks(data.books)
-            console.log(data.books)
-        }
-        bookFetch()
-    }, [])
+    const handleClick = (e) => {
+        setWhichBook(e.target.id)
+        navigate('/all-chapters')
+    }
+
 
     return (
         <div className="all-books-container">
-            <div className="sahih-al-bukhari">
-                <h4 className="book-name">{books[0].bookName}</h4>
+            <div className="book-container">
+                <h4 className="book-name">Sahih Bukhari</h4>
+                <p className="book-info">Chapters: 99</p>
+                <p className="book-info">Hadiths: 7551</p>
+                <button className="btn-view" id="sahih-bukhari" onClick={handleClick}>View Book</button>
             </div>
-            <div className="sahih-muslim">
-
+            <div className="book-container">
+                <h4 className="book-name">Sahih Muslim</h4>
+                <p className="book-info">Chapters: 56</p>
+                <p className="book-info">Hadiths: 7561</p>
+                <button className="btn-view" id="sahih-muslim" onClick={handleClick}>View Book</button>
             </div>
-            <div className="sunan-at-tirmidhi">
-
+            <div className="book-container">
+                <h4 className="book-name">Jami' Al-Tirmidhi</h4>
+                <p className="book-info">Chapters: 50</p>
+                <p className="book-info">Hadiths: 3956</p>
+                <button className="btn-view" id="al-tirmidhi" onClick={handleClick}>View Book</button>
             </div>
-            <div className="sunan-abu-dawood">
-
+            <div className="book-container">
+                <h4 className="book-name">Sunan Abu Dawood</h4>
+                <p className="book-info">Chapters: 43</p>
+                <p className="book-info">Hadiths: 5274</p>
+                <button className="btn-view" id="abu-dawood" onClick={handleClick}>View Book</button>
             </div>
-            <div className="sunan-an-nasai">
-
+            <div className="book-container">
+                <h4 className="book-name">Sunan An-Nasa'i</h4>
+                <p className="book-info">Chapters: 52</p>
+                <p className="book-info">Hadiths: 5761</p>
+                <button className="btn-view" id="sunan-nasai" onClick={handleClick}>View Book</button>
             </div>
         </div>
     )

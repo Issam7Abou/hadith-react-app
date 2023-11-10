@@ -21,17 +21,17 @@ const BodyPage = () => {
     const btnStyle2 = btnStyle(img2)
 
     const navigate = useNavigate()
-    const handleClick = () => {
-        navigate('/random-hadith')
+    const handleClick = (route) => {
+        navigate(route)
     }
 
     return (
         <div className="body-container">
             <div className="body-random-hadith-container">
-                <button onClick={handleClick} className="btn" style={btnStyle1}>Get a Random Hadith</button>
+                <button onClick={() =>handleClick('/random-hadith')} className="btn" style={btnStyle1}>Get a Random Hadith</button>
             </div>
             <div className="all-hadith-container">
-                <button className="btn" style={btnStyle2}>See all Hadith Books</button>
+                <button onClick={() =>handleClick('/all-books')} className="btn" style={btnStyle2}>See all Hadith Books</button>
             </div>
         </div>
     )
