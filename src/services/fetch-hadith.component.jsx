@@ -18,11 +18,14 @@ export const fetchRandomHadith = async () => {
 
 //Fetch func for All Chapters of a Book
 export const fetchChapters = async (bookName) => {
-    const apiUrl1 = `/api/${bookName}/chapters?apiKey=${apiKey}`
+    const apiUrl = `/api/${bookName}/chapters?apiKey=${apiKey}`
     try {
-        const response = await fetch(apiUrl1)
+        const response = await fetch(apiUrl)
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`)
+        }
         const data = await response.json()
-        console.log(data.chapters)
+        console.log(data.chapters[0].chapterEnglish)
     } catch (error) {
         console.log('There was the following error when fetching:', error)
     }

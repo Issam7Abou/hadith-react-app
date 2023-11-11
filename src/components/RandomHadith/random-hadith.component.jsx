@@ -20,7 +20,6 @@ const RandomHadith = () => {
     // Performs api call onMount
     useEffect(() => {
         getRandomizedHadith()
-        console.log(hadithRandomized)
     }, [])
 
     const handleClick = () => {
@@ -37,7 +36,7 @@ const RandomHadith = () => {
 
     return (
         <div className="random-hadith-container" style={btnStyle}>
-            <p>{hadithRandomized.hadithEnglish}</p>
+            <p className="hadith-text">{hadithRandomized.hadithEnglish}</p>
             <h4>Book: {hadithRandomized.book?.bookName}</h4>
             <p>Chapter Name: {hadithRandomized.chapter?.chapterEnglish}</p>
             <p>Hadith Nr: {hadithRandomized.hadithNumber}</p>

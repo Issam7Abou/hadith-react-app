@@ -6,6 +6,10 @@
     border-radius: 15px;
     text-align: center;
 }
+
+  .hadith-text {
+    margin: 45px 45px 5px 15px;
+  }
   
   .random-hadith-container p,
   .random-hadith-container h4 {

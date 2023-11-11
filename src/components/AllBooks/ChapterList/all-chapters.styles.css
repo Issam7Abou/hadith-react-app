@@ -1,0 +1,70 @@
+.all-chapters-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    margin: 8rem auto;
+  }
+  
+  .chapter {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 7px;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .info {
+    margin: 1rem 3.5rem 1rem 2.5rem;
+  }
+
+  .chapter-number {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .chapter-name {
+    font-size: 1.5rem;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  .chapter-name-arabic {
+    font-size: 1.2rem;
+    color: #777;
+  }
+  
+  p {
+    margin: 0;
+  }
+
+  .btn-views {
+    background-color: #007BFF;
+    width: 12%;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .btn-views:hover {
+    background-color: #0056b3;
+  }
+
+  .fa-search {
+    color: white;
+    font-size: 20px;
+  }
+  
+  .loading-message {
+    font-size: 1.5rem;
+    color: #555;
+  }  

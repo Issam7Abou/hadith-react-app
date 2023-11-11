@@ -7,10 +7,11 @@
 
 .book-container {
     display: flex;
-    background-color: rgb(247, 247, 235);
     border: 1px solid #938f8f;
     border-radius: 8px;
     margin-bottom: 1rem;
+    padding: 7px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     overflow: hidden;
     position: relative;
@@ -18,13 +19,17 @@
 
 .book-name {
     margin: 1rem;
+    font-size: 1.5rem;
 }
 
 .book-info {
-    margin: 1rem 3.5rem 1rem 3.5rem;
+    color: #555;
+    font-size: 1.2rem;
+    margin: 1rem 2.5rem 1rem 2.5rem;
 }
 
 .btn-view {
+    width: 10%;
     background-color: #007BFF;
     color: #fff;
     padding: 0.5rem 1rem;
