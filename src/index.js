@@ -14,11 +14,11 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <RandomHadithProvider>
-        <ChaptersProvider>
-          <WhichBookProvider>
+        <WhichBookProvider>
+          <ChaptersProvider>
             <App />
-          </WhichBookProvider>
-        </ChaptersProvider>
+          </ChaptersProvider>
+        </WhichBookProvider>
       </RandomHadithProvider>
     </BrowserRouter>
   </React.StrictMode>

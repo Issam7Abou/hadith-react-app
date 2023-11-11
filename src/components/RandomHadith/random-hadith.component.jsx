@@ -20,6 +20,7 @@ const RandomHadith = () => {
     // Performs api call onMount
     useEffect(() => {
         getRandomizedHadith()
+        console.log(hadithRandomized)
     }, [])
 
     const handleClick = () => {
