@@ -6,6 +6,7 @@ import App from './App';
 import { RandomHadithProvider } from './context/random-hadith.context';
 import { ChaptersProvider } from './context/chapters.context';
 import { WhichBookProvider } from './context/which-book.context';
+import { WhichChapterProvider } from './context/which-chapter.context';
 
 import './index.css';
 
@@ -16,7 +17,9 @@ root.render(
       <RandomHadithProvider>
         <WhichBookProvider>
           <ChaptersProvider>
-            <App />
+            <WhichChapterProvider>
+              <App />
+            </WhichChapterProvider>
           </ChaptersProvider>
         </WhichBookProvider>
       </RandomHadithProvider>

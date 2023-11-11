@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 
 import { WhichBookContext } from "../../../context/which-book.context";
 import { ChaptersContext } from "../../../context/chapters.context";
+import { WhichChapterContext } from "../../../context/which-chapter.context";
 
 import '@fortawesome/fontawesome-free/css/all.css'
 import './all-chapters.styles.css'
@@ -10,6 +11,7 @@ import './all-chapters.styles.css'
 const AllChapters = () => {
     const { whichBook } = useContext(WhichBookContext)
     const { chapters, setChapters } = useContext(ChaptersContext)
+    const { setWhichChapter } = useContext(WhichChapterContext)
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -24,10 +26,14 @@ const AllChapters = () => {
                 console.log('There was the following error when fetching:', error)
             }
             console.log(chapters)
-            console.log(chapters.length)
         }
         fetchChapters()
     }, [])
+
+    const handleClick = (chapterNumber) => {
+        navigate('/all-hadiths')
+        setWhichChapter(chapterNumber)
+    }
 
     return (
         <div className="all-chapters-container">
@@ -37,7 +43,7 @@ const AllChapters = () => {
                         <h4 className="chapter-number info">{item.chapterNumber}</h4>
                         <p className="chapter-name info">{item.chapterEnglish}</p>
                         <p className="chapter-name-arabic info">{item.chapterArabic}</p>
-                        <button className="btn-views">
+                        <button className="btn-views" onClick={() =>handleClick(item.chapterNumber)}>
                             <i className="fas fa-search"></i>
                         </button>
                     </div>))
