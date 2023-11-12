@@ -52,3 +52,8 @@
   .btn-favorite:hover {
     color: #c0392b; /* Darker red on hover */
   }
+
+  .fa-copy {
+    margin-right: 8px;
+    color: rgb(30, 48, 80);
+  }

@@ -39,6 +39,7 @@ const AllHadiths = () => {
                         <p className="hadith-book">{item.book.bookName}</p>
                         <p className="hadith-chapter">{item.chapter.chapterEnglish}</p>
                         <button className="btn-favorite">
+                            <i class="fa-solid fa-copy"></i>
                             <i class="fa-regular fa-heart"></i>
                         </button>
                     </div>

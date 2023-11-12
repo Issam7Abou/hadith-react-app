@@ -5,7 +5,6 @@
 
 .body-container {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
     height: 80vh; /* Use full viewport height to center vertically */
@@ -13,15 +12,15 @@
 
 .body-random-hadith-container,
 .all-hadith-container {
-    width: 100%; /* Set the width of the button containers */
-    max-width: 500px; /* Maximum width to maintain reasonable size */
+    width: 50%; /* Set the width of the button containers */
+    max-width: 300px; /* Maximum width to maintain reasonable size */
 }
 
 .btn {
     width: 80%; /* Full width of the parent container */
     height: 350px;
     padding: 1.5em 2em; /* Large padding for a div-like appearance */
-    font-size: 1.2em; /* Larger text for readability */
+    font-size: 3.35em; /* Larger text for readability */
     font-weight: bold; /* Bold font for the button text */
     color: #ffffff; /* White text color */
     background-color: rgba(30, 176, 176, 0.251); /* Modern blue for the button background */
@@ -33,9 +32,8 @@
 }
 
 .btn:hover {
-    background-color: rgba(31, 129, 129, 0.3); /* Darker blue on hover for interaction feedback */
-    color: rgb(164, 159, 159);
-    font-size: 1.35em;
+    color: rgb(50, 173, 189);
+    font-size: 3.35em;
 }
 
 .btn:focus {
