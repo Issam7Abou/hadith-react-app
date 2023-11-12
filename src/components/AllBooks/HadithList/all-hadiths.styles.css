@@ -1,0 +1,54 @@
+/* all-hadiths.styles.css */
+
+.all-hadiths-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    margin: 8rem auto;
+  }
+  
+  .hadiths {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 7px;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .narrator {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .hadith {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  .hadith-info {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .hadith-book,
+  .hadith-chapter {
+    font-size: 14px;
+    color: rgb(5, 170, 170);
+  }
+  
+  .btn-favorite {
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #df594a; /* Red color for heart icon */
+  }
+  
+  .btn-favorite:hover {
+    color: #c0392b; /* Darker red on hover */
+  }
