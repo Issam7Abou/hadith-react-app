@@ -16,6 +16,9 @@ const NavBar = () => {
                 <li>
                     <Link to='/all-books' className="importante">All Books</Link>
                 </li>
+                <li>
+                    <Link to='/favorites' className="importante">Favorites</Link>
+                </li>
             </ul>
         </nav>
     )

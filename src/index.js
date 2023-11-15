@@ -8,6 +8,7 @@ import { ChaptersProvider } from './context/chapters.context';
 import { WhichBookProvider } from './context/which-book.context';
 import { WhichChapterProvider } from './context/which-chapter.context';
 import { AllHadithsProvider } from './context/all-hadiths.context';
+import { FavoriteHadithsProvider } from './context/favorite-hadith.context';
 
 import './index.css';
 
@@ -20,7 +21,9 @@ root.render(
           <ChaptersProvider>
             <WhichChapterProvider>
               <AllHadithsProvider>
-                <App />
+                <FavoriteHadithsProvider>
+                  <App />
+                </FavoriteHadithsProvider>
               </AllHadithsProvider>
             </WhichChapterProvider>
           </ChaptersProvider>
