@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
+import DarkModeToggle from "../DarkMode/dark-mode.component";
+
 import './nav-bar.styles.css'
 
 const NavBar = () => {
@@ -19,6 +21,7 @@ const NavBar = () => {
                 <li>
                     <Link to='/favorites' className="importante">Favorites</Link>
                 </li>
+                    <DarkModeToggle />
             </ul>
         </nav>
     )

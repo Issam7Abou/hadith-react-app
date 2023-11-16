@@ -12,7 +12,7 @@ const AllHadiths = () => {
     const { whichBook } = useContext(WhichBookContext)
     const { whichChapter } = useContext(WhichChapterContext)
     const { allHadiths, setAllHadiths } = useContext(AllHadithsContext)
-    const { hadiths, addHadith } = useContext(FavoriteHadithsContext)
+    const { addHadith } = useContext(FavoriteHadithsContext)
 
     useEffect(() => {
         const apiKey = '$2y$10$BWleXewOsA3SRKdIBKJZbvofXKDjrJhcWfQkCOM0WA7uOtXzquAG'

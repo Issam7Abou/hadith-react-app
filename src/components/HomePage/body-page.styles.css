@@ -33,7 +33,6 @@
 
 .btn:hover {
     color: rgb(50, 173, 189);
-    font-size: 3.35em;
 }
 
 .btn:focus {
@@ -52,6 +51,6 @@
 
     .btn {
         padding: 1em 1.5em; /* Smaller padding on smaller screens */
-        font-size: 1em; /* Adjust font size for smaller screens */
+        font-size: 3em; /* Adjust font size for smaller screens */
     }
 }
