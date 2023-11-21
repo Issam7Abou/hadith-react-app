@@ -1,0 +1,21 @@
+.normal-mode {
+    background-color: transparent;
+    border: none;
+    color: rgb(30, 48, 80);
+    font-size: 30px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+body.dark-mode {
+    background-color: black;
+    color: aliceblue;
+    p {
+        color: rgb(173, 163, 163);
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: aqua;
+    }
+}
