@@ -5,6 +5,7 @@ import { WhichBookContext } from "../../../context/which-book.context";
 import { ChaptersContext } from "../../../context/chapters.context";
 import { WhichChapterContext } from "../../../context/which-chapter.context";
 
+import { CircleLoader } from "react-spinners";
 import '@fortawesome/fontawesome-free/css/all.css'
 import './all-chapters.styles.css'
 
@@ -38,19 +39,21 @@ const AllChapters = () => {
     return (
         <div className="all-chapters-container">
             {chapters.length > 0 ? 
-            (chapters.map(item => (
-                    <div className="chapter" key={item.id}>
-                        <h4 className="chapter-number info">{item.chapterNumber}</h4>
-                        <p className="chapter-name info">{item.chapterEnglish}</p>
-                        <p className="chapter-name-arabic info">{item.chapterArabic}</p>
-                        <button className="btn-views" onClick={() =>handleClick(item.chapterNumber)}>
-                            <i className="fas fa-search"></i>
-                        </button>
-                    </div>))
-            ) 
-            : 
-            (<p>Loading chapters...</p>)
-        }
+                (chapters.map(item => (
+                        <div className="chapter" key={item.id}>
+                            <h4 className="chapter-number info">{item.chapterNumber}</h4>
+                            <p className="chapter-name info">{item.chapterEnglish}</p>
+                            <p className="chapter-name-arabic info">{item.chapterArabic}</p>
+                            <button className="btn-views" onClick={() =>handleClick(item.chapterNumber)}>
+                                <i className="fas fa-search"></i>
+                            </button>
+                        </div>))
+                ) 
+                : 
+                (<div className="loader">
+                    <CircleLoader color={'aqua'} loading={true} size={150} />
+                </div>)
+            }
         </div>
     )
 }

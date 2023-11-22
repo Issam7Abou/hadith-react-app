@@ -5,6 +5,7 @@ import { WhichChapterContext } from "../../../context/which-chapter.context";
 import { AllHadithsContext } from "../../../context/all-hadiths.context";
 import { FavoriteHadithsContext } from "../../../context/favorite-hadith.context";
 
+import { CircleLoader } from "react-spinners";
 import '@fortawesome/fontawesome-free/css/all.css'
 import './all-hadiths.styles.css'
 
@@ -54,24 +55,26 @@ const AllHadiths = () => {
 
     return (
         <div className="all-hadiths-container">
-        {allHadiths.length > 0 ? 
-            (allHadiths.map(item => (
-                    <div className="hadiths" key={item.id}>
-                        <h4 className="narrator">{item.englishNarrator}</h4>
-                        <p className="hadith">{item.hadithEnglish}</p>
-                        <div className="hadith-info">
-                            <p className="hadith-book">{item.book.bookName}</p>
-                            <p className="hadith-chapter">{item.chapter.chapterEnglish}</p>
-                            <button className="btn-favorite" onClick={() => handleAddHadith(item)}>
-                                <i class="fa-solid fa-copy"></i>
-                                <i class="fa-regular fa-heart"></i>
-                            </button>
-                        </div>
-                    </div>))
-            ) 
-            : 
-            (<p>Loading chapters...</p>)
-        }
+            {allHadiths.length > 0 ? 
+                (allHadiths.map(item => (
+                        <div className="hadiths" key={item.id}>
+                            <h4 className="narrator">{item.englishNarrator}</h4>
+                            <p className="hadith">{item.hadithEnglish}</p>
+                            <div className="hadith-info">
+                                <p className="hadith-book">{item.book.bookName}</p>
+                                <p className="hadith-chapter">{item.chapter.chapterEnglish}</p>
+                                <button className="btn-favorite" onClick={() => handleAddHadith(item)}>
+                                    <i class="fa-solid fa-copy"></i>
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>))
+                ) 
+                : 
+                (<div className="loader">
+                    <CircleLoader color={'aqua'} loading={true} size={150} />
+                </div>)
+            }
         </div>
     )
 }
