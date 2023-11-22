@@ -15,7 +15,6 @@ const AllBooks = () => {
         navigate('/all-chapters')
     }
 
-
     return (
         <div className="all-books-container">
             <div className="book-container">

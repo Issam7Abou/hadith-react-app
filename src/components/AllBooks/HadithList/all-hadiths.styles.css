@@ -41,7 +41,7 @@
     color: rgb(5, 170, 170);
   }
   
-  .btn-favorite {
+  .btn-hadiths {
     background-color: #fff;
     border: none;
     cursor: pointer;
@@ -49,14 +49,21 @@
     color: #df594a; /* Red color for heart icon */
   }
   
-  .btn-favorite:hover {
+  .fa-heart {
     color: #c0392b; /* Darker red on hover */
   }
 
-.fa-copy {
-  margin-right: 8px;
-  color: rgb(30, 48, 80);
-}
+  .fa-heart:hover {
+    color: #dd8076;
+  }
+
+  .fa-copy {
+    color: rgb(30, 48, 80);
+  }
+
+  .fa-copy:hover {
+    color: rgb(64, 87, 126);
+  }
 
 .favorite-popUp {
   background-color: #df594a;

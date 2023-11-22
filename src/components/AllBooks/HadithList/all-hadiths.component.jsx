@@ -53,6 +53,12 @@ const AllHadiths = () => {
         }, 2000)
     }
 
+    // func to copy the hadith when copy btn clicked
+    const handleCopyHadith = (item) => {
+        const textToCopy = item.hadithEnglish
+        navigator.clipboard.writeText(textToCopy)
+    }
+
     return (
         <div className="all-hadiths-container">
             {allHadiths.length > 0 ? 
@@ -63,10 +69,14 @@ const AllHadiths = () => {
                             <div className="hadith-info">
                                 <p className="hadith-book">{item.book.bookName}</p>
                                 <p className="hadith-chapter">{item.chapter.chapterEnglish}</p>
-                                <button className="btn-favorite" onClick={() => handleAddHadith(item)}>
-                                    <i class="fa-solid fa-copy"></i>
-                                    <i class="fa-regular fa-heart"></i>
-                                </button>
+                                <div>
+                                    <button className="btn-hadiths" onClick={() => handleCopyHadith(item)}>
+                                        <i class="fa-solid fa-copy"></i>
+                                    </button>
+                                    <button className="btn-hadiths" onClick={() => handleAddHadith(item)}>
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>))
                 ) 
